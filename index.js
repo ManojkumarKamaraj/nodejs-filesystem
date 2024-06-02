@@ -19,6 +19,9 @@ const pathfolder = path.dirname(filepath); // TimeStamp
 
 const filename = path.basename(filepath); // file creation time and extension
 
+app.get('/',(req,res)=>{
+    res.status(200).send("Api is running successfully")
+})
 
 app.get('/create-date',(req,res)=>{
     fs.writeFileSync(filepath,`${datetoday}`,"utf-8");
